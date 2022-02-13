@@ -15,5 +15,7 @@ namespace WebAppQuitanda.Data
         }
 
         public DbSet<WebAppQuitanda.Models.Produto> Produto { get; set; }
+        public DbSet<WebAppQuitanda.Models.Cliente> Clientes { get; set; }
+
     }
 }

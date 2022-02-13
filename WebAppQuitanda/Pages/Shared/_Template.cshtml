@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <meta charset="utf-8" lang="pt-br"/>
+    <title>Verdureira Online :: Área Administrativa</title>
+    <link  rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <header class="container-fluid">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href"#">Verdureira Online</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+                    aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <div class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-page="/Admin">Área administrativa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-page="/ProdutoCRUD/Index">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-page="/ClienteCRUD/Listar">Clientes</a>
+                </div>                  </li>
+            </div>
+        </nav>
+
+    </header>
+    <section class="container">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </section>
+    <footer class="footer bg-light text-center p-4 fixed-bottom">
+            <div class="container">
+                &copy; 2022 - WebAppQuitanda - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            </div> 
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+</body>
+</html>
