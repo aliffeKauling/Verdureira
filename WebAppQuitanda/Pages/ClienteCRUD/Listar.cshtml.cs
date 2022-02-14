@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using WebAppQuitanda.Data;
 using WebAppQuitanda.Models;
+using WebAppQuitanda.Pages.Shared;
 
 
 namespace WebAppQuitanda.Pages.ClienteCRUD

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using WebAppQuitanda.Pages.Shared;
+using WebAppQuitanda.Pages.ClienteCRUD;
 
 namespace WebAppQuitanda.Pages.Shared
 {

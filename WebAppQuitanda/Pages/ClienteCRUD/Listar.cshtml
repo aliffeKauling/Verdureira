@@ -32,10 +32,10 @@
                 @foreach (var item in Model.Clientes)
                 {
                     <tr>
-                        <td>@Html.DisplayFor(m => m.Clientes[0].Nome)</td>
-                        <td>@Html.DisplayFor(m => m.Clientes[0].CPF)</td>
-                        <td>@Html.DisplayFor(m => m.Clientes[0].DataNascimento)</td>
-                        <td>@Html.DisplayFor(m => m.Clientes[0].Email)</td>
+                        <td>@Html.DisplayFor(ModelItem => item.Nome)</td>
+                        <td>@Html.DisplayFor(ModelItem => item.CPF)</td>
+                        <td>@Html.DisplayFor(ModelItem => item.DataNascimento)</td>
+                        <td>@Html.DisplayFor(ModelItem => item.Email)</td>
                         <td class="text-center">
                             <a class="btn btn-primary btn-sm" asp-page="./Alterar" asp-route-id="@item.IdCliente">Alterar</a>
                             <form class="d-inline-block" asp-page-handler="delete" asp-route-id="@item.IdCliente" method="post">
@@ -54,3 +54,7 @@
     }
 
 </main>
+
+@section Scripts {
+@{ await Html.RenderPartialAsync("_CustomConfirm");}
+}
